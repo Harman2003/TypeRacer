@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastRacer</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./images/logo@2x.png" alt="fastfinger" id="logo" />
+      <ul>
+        <li>HOME</li>
+        <li>COMPETE</li>
+        <li>CONTACT</li>
+      </ul>
+    </nav>
+
+    <div class="background">
+      <div class="moving-bg"></div>
+    </div>
+
+    <!-- Page 1 -->
+    <div id="page1">
+
+      <div id="startpage">
+        <div id="newgame_div">
+          <button id="newgame">New Game</button>
+          <input type="text" id="newusername" placeholder="Username" />
+        </div>
+        <div id="joingame_div">
+          <button id="joingame">Join Game</button>
+          <input type="text" id="mygamecode" placeholder="Code" />
+          <input type="text" placeholder="Username" id="username" />
+        </div>
+      </div>
+
+      <div id="waitingroom" style="display: none">
+        <div class="waitingbox">
+          <div class="box">
+            <span></span>
+            <span></span>
+            <div class="main_content">
+              <div id="gamecode">Game Code</div>
+              <div id="playerroom">
+                <ul id="playerlist"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="startgame_div">
+        <button id="startgame" style="display: none">Start Game</button>
+        </div>
+      </div>
+      <div class="wait_loader" style="display: none;">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+    </div>
+
+
+    <!-- Page 2 -->
+
+    <div id="page2" style="display: none;">
+
+      <div class="container">
+        <div class="main_box">
+          <div class="content">
+            <div class="wordbox"></div>
+          </div>
+          <div class="writer">
+            <input type="text" id="box" />
+            <div id="timer"><span id="time">1:00</span></div>
+            <!-- <button class="reset fa-solid fa-arrows-rotate" ></button> -->
+            <button class="btn reset">
+              <i
+                class="fa fa-refresh fa-2x"
+                style="color: rgb(243, 243, 243)"
+              ></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- loader -->
+        <div class="loader" style="display: none;">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <img src="images/typing.gif" id="boy" alt="typing" style="display: none;"/>
+        
+        <div class="lboard_wrap"></div>
+      </div>
+      
+    <!-- <img src="./images/output-onlinegiftools.gif" alt="" style="position: relative;bottom: 100px; "
+    > -->
+    </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+nav {
+  display: flex;
+  background-color: #451010dd;
+  z-index: 1000;
+}
+nav ul{
+  margin-top: 20px;
+  align-self: center;
+  list-style: none;
+}
+nav ul li{
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(224, 219, 219);
+  margin: 5px;
+  display: inline;
+}
+.background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+}
+
+.background .moving-bg {
+  min-width: 100%;
+  min-height: 100%;
+
+  background-image: url("./images/racer.png");
+  /* background-size: */
+  /* animation: moving 30s linear infinite */
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300px);
+  }
+}
+
+#logo {
+  width: 150px;
+  margin: 10px 20px 10px 10px;
+}
+#page1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+#car_img{
+  align-self: center;
+  height: 30%;
+}
+#startpage {
+  height: 25%;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-self: start;
+}
+#newgame_div,
+#joingame_div {
+  height: 50px;
+  width: 90%;
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+#newgame {
+  background-image: linear-gradient(
+    to right,
+    #6a1720 0%,
+    #471986 51%,
+    #1ca0d0 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  border: 2px;
+  border-radius: 5px;
+  width: 30%;
+}
+#newusername {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #8db0d6de;
+  width: 68%;
+}
+#newgame:hover,
+#joingame:hover, .lboard_wrap:hover, #startgame{
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+#joingame {
+   background-image: linear-gradient(
+    to right,
+    #6a1720 0%,
+    #471986 51%,
+    #1ca0d0 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  border: 2px;
+  border-radius: 5px;
+  width: 30%;
+}
+#mygamecode {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #70aef0;
+  width: 25%;
+}
+#username {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #70aef0;
+  width: 40%;
+}
+::placeholder {
+  text-align: center;
+}
+
+#gamecode{
+  font-family: "Montserrat", sans-serif;
+  font-size: 3f0px;
+  font-weight: 600;
+  color: rgb(208, 204, 204);
+}
+#playerroom {
+  /* border: 2px solid; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: goldenrod;
+  margin: 10px 10px;
+  width: 500px;
+  height: 200px;
+  justify-self: start;
+}
+#playerlist {
+  width: 30%;
+  text-align: start;
+  list-style: none;
+}
+#playerlist li{
+  margin: 5px;
+}
+
+#page2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  height: 570px;
+  width: 60%;
+  align-self: center;
+  /* margin-top: 80px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+.main_box{
+  height: 35%;
+  display: flex;
+  flex-direction:column ;
+  justify-content: space-evenly;
+}
+
+#box {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  background-color: rgb(244, 244, 244);
+  border-color: black;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 40%;
+  height: 50px;
+}
+.writer {
+  width: 100%;
+  height: 50px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+#timer {
+  width: 15%;
+  margin: 0px 3px;
+  background-color: rgba(56, 56, 56, 0.893);
+  border-radius: 5px;
+  color: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset {
+  width: 45px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #0a4584;
+}
+.content {
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #70aef0;
+  background-color: rgb(243, 243, 243);
+  align-self: center;
+  width: 100%;
+  height: 80px;
+  padding: 1% 0% 0% 2%;
+  overflow: hidden;
+  /* display: none; */
+}
+.wordbox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pointer,
+span {
+  padding: 1px 0px 1px 5px;
+}
+.pointer {
+  border-radius: 5px;
+  background-color: #b9bdc260;
+}
+#boy {
+  width: 40%;
+  position: relative;
+  left: 8%;
+  /* bottom: 0px; */
+  align-self: center;
+  z-index: 1;
+}
+
+/* leaderboard */
+.winner{
+  color: goldenrod;
+}
+.lboard_wrap {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  /* position: absolute; */
+  top: 70px;
+  background-image: linear-gradient(
+    to right,
+    #d96572c7 0%,
+    #471986 51%,
+    #1ca0d0 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  color: rgb(217, 225, 225);
+  width: 70%;
+  border-radius: 10px;
+}
+
+.lboard_wrap {
+  align-self: center;
+  padding: 15px;
+}
+
+.lboard_wrap .lboard_mem {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ffe773;
+}
+
+.lboard_wrap .lboard_mem:first-child {
+  padding-top: 0;
+}
+
+.lboard_wrap .lboard_mem:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.lboard_wrap .lboard_mem .name_bar {
+  margin: 0 10px;
+  width: calc(100% - 150px);
+}
+
+.lboard_wrap .lboard_mem .name_bar p span {
+  margin-right: 5px;
+}
+
+.lboard_wrap .lboard_mem .name_bar .bar_wrap {
+  /* width: 100%; */
+  height: 5px;
+  background: #d5b000;
+  margin-top: 5px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lboard_wrap .lboard_mem .name_bar .bar_wrap .inner_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #fff;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.points {
+  margin: 5px;
+}
+
+
+
+/* waiting box */
+#waitingroom{
+display: flex;
+flex-direction: column;
+width: 50%;
+
+}
+.waitingbox{ 
+  width: 100%; 
+  height: 25vw;
+  padding-top: 20px;
+  padding-bottom: 20px;}
+
+#startgame_div{
+  display: flex;
+  justify-content: center;
+}
+#startgame{
+  width: 25vw;
+  height: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  border: 1px;
+  border-radius: 5px;
+   background-image: linear-gradient(
+    to right,
+    #d96572c7 0%,
+    #471986 51%,
+    #1ca0d0 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  color: rgb(217, 225, 225);
+}
+
+.main_content h2{ 
+  display: flex;
+  flex-direction: column;
+  font-size:19px;
+}
+
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 25vw;
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+}
+
+.box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
+
+.box:hover:before{
+  left:-50%;
+  transform: skewX(-5deg);
+}
+
+
+.box .main_content{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  border:1px solid #f0a591;
+  padding:20px;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  
+}
+
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
+
+.box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+
+.box span:nth-child(2)
+{
+  transform:rotate(180deg);
+}
+
+.box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  }
+  
+  
+} 
+
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+
+ .loader, .wait_loader {
+align-self: center;
+width: 200px;
+height : 35%;
+display : flex;
+flex-direction: row;
+justify-content: center; 
+align-items : center; 
+}
+ .wait_loader{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto
+ }
+.loader div {
+align-self: center;
+justify-self: center;
+width: 25px;
+height:25px;
+background: #ffffff;
+border-radius: 15px;
+margin : 5px;
+animation: loader 0.6s infinite alternate;
+}
+
+
+@keyframes loader {
+to {
+opacity: 0.1;
+transform: translate(0, -20px);
+background : rgb(114, 24, 139);
+}
+}
+
+.loader div:nth-child(2) {
+animation-delay: 0.2s;
+}
+.loader div:nth-child(3) {
+animation-delay: 0.4s;
+}
+
+@media screen and (max-width: 500px) {
+
+  nav ul li{
+    font-size: 14px;
+  }
+  #logo{
+    width: 100px;
+  }
+  #newgame, #newusername, #joingame, #mygamecode, #username{
+    font-size: 15px;
+  }
+  .container{
+    width: 80%;
+  }
+  .box{
+    top: 350px;
+    width: 70%;
+    height: 120vw;
+  }
+  #gamecode{
+    font-size: 16px;
+  }
+  #playerlist{
+    font-size: 18px;
+  }
+  
+  .lboard_wrap{
+    width: 100%;
+  }
+  #boy {
+    width: 100%;
+  }
+  .wrapper {
+    font-size: 14px;
+  }
+  #timer {
+    padding-right: 8px;
+    font-size: 20px;
+  }
+  #box {
+    font-size: 20px;
+    width: 60%;
+  }
+}
