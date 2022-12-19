@@ -6,7 +6,7 @@
   },
   "name": "fastfinger",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "frontend/index.js",
   "devDependencies": {},
   "scripts": {
     "start": "node server/server.js"
