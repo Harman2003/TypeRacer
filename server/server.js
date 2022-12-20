@@ -24,7 +24,7 @@ io.on("connection", (client) => {
     admins[roomid] = client;
 
     playerjoined(roomid);
-    io.emit("init", roomid);
+    client.emit("init", roomid);
   };
   
   // Joins a game if valid code
@@ -33,10 +33,10 @@ io.on("connection", (client) => {
     client.speed = 0;
     client.correctness = 0;
     if (!io.sockets.adapter.rooms.has(obj.code)) {
-      io.emit("joinedroom", "false");
+      client.emit("joinedroom", "false");
     }
     else {
-      io.emit("joinedroom", "true")
+      client.emit("joinedroom", "true")
       client.join(obj.code);
       playerjoined(obj.code);
     }
